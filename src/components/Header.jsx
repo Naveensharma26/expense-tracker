@@ -14,7 +14,10 @@
 
     return (
       <div className=' px-4 py-2 fixed z-1 w-full flex flex-row justify-between  items-center  text-black bg-ye'>
-        <h1 className='text-3xl font-family:var(Edu VIC WA NT Beginner)'>Expense Tracker</h1>  
+        <div className='flex flex-row'>
+          <img src='wallet.png' className='w-10 h-10 mx-2'/>
+          <h1 className='text-3xl font-family:var(Edu VIC WA NT Beginner)'>Expense Tracker</h1>  
+        </div>
         <div className='flex flex-row items-center'>
           {loggedInUser.userName && loggedInUser && <h1>{loggedInUser.userName}</h1>}
           <FaRegUser className='mx-2'/>
