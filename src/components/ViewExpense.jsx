@@ -30,7 +30,7 @@ function ViewExpense({loggedInUser}) {
   },[month]);
 
   const handleDelete = (id) => {
-    const deleteExpenseByIdURI = `http://localhost:8080/expense/${id}`;
+    const deleteExpenseByIdURI = `https://expense-tracker-backend-gcto.onrender.com/expense/${id}`;
     fetch(deleteExpenseByIdURI,{
       method:'DELETE'
     }
@@ -46,8 +46,8 @@ function ViewExpense({loggedInUser}) {
   }
 
   const  fetchData = async ()=>{
-    const getExpenseByUserId = `http://localhost:8080/expenseByMonth/${loggedInUser.id}/${month}`;
-    const getCategoryByUserIdAndMonth = `http://localhost:8080/countCatExpense/${loggedInUser.id}/${month}`
+    const getExpenseByUserId = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}/${month}`;
+    const getCategoryByUserIdAndMonth = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}/${month}`
     const data = await fetch(getExpenseByUserId);
     const data2 = await data.json();
     let total = 0;

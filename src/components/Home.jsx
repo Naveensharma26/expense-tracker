@@ -14,11 +14,11 @@ function Home({loggedInUser}) {
   const month = (new Date().getMonth())+1;
   const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
   const COLORS = ["#fff4d8", "#824afd", "#0df6df", "#ff8042", "#8dd1e1"];
-  const getLast3TransactionsURL = `http://localhost:8080/recentexpense/${loggedInUser.id}`;
-  const getAllTransactionsURL = `http://localhost:8080/expenseByUserId/${loggedInUser.id}`;
-  const getCurrentMonthsExpenseURI = `http://localhost:8080/expenseByMonth/${loggedInUser.id}/${month}`;
-  const getCategoricalDataURI = `http://localhost:8080/countCatExpense/${loggedInUser.id}`;
-  const fetchUserByUserId = `http://localhost:8080/users/${loggedInUser.id}`;
+  const getLast3TransactionsURL = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}`;
+  const getAllTransactionsURL = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}`;
+  const getCurrentMonthsExpenseURI = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}/${month}`;
+  const getCategoricalDataURI = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}`;
+  const fetchUserByUserId = `https://expense-tracker-backend-gcto.onrender.com/${loggedInUser.id}`;
 
   const [last3Data,setLast3Data] = useState([])
   const [allData,setAllData] = useState([])
@@ -39,7 +39,7 @@ function Home({loggedInUser}) {
   },[allData,monthData])
   
   const handleDelete = (id) => {
-    const deleteExpenseByIdURI = `http://localhost:8080/expense/${id}`;
+    const deleteExpenseByIdURI = `https://expense-tracker-backend-gcto.onrender.com/expense/${id}`;
     fetch(deleteExpenseByIdURI,{
       method:'DELETE'
     }

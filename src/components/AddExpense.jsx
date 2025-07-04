@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 
 function AddExpense({loggedInUser}) {
 
-  const addExpenseURL =  'http://localhost:8080/expense';
+  const addExpenseURL =  'https://expense-tracker-backend-gcto.onrender.com/expense';
   const navigate = useNavigate();
   const [amount,setAmount] = useState(0);
   const [category,setCategory] = useState("");

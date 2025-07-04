@@ -6,7 +6,7 @@ function Signup() {
   const [username,setUsername] = useState("");
   const [password,setPassword] = useState("");
   const [email,setEmail] = useState("");
-  const UserURI = 'http://localhost:8080/users';
+  const UserURI = 'https://expense-tracker-backend-gcto.onrender.com/users';
   const [userPresent,setUserPresent] = useState(false);
 
   const navigate = useNavigate();

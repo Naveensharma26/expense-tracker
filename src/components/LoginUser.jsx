@@ -9,7 +9,7 @@ function LoginUser({sendUser,darkMode,setDarkMode}) {
   const [users,setUsers] = useState([])
   const [validUser,setValidUser] = useState(true);
   const navigate = useNavigate();
-  const UserURI = 'http://localhost:8080/users';
+  const UserURI = 'https://expense-tracker-backend-gcto.onrender.com/users';
 
   useEffect(()=>{
     fetchUsers();
